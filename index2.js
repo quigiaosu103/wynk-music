@@ -55,7 +55,7 @@ const app = {
             id: '6',
             name: 'Kẻ theo đuổi ánh sáng',
             singer: 'Huy Vạc',
-            img: 'access/img/song6.jpg',
+            img: 'access/img/Lucian_0.jpg',
             song: 'access/song/song6.mp3'
         },
         {   
@@ -98,7 +98,7 @@ const app = {
             id: '12',
             name: 'Kẻ theo đuổi ánh sáng',
             singer: 'Huy Vạc',
-            img: 'access/img/song6.jpg',
+            img: 'access/img/Lucian_0.jpg',
             song: 'access/song/song6.mp3'
         },
         
