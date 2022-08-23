@@ -73,39 +73,39 @@ const app = {
         },
         {
             id: '8',
-            name: 'Rap Acoustic 4',
-            singer: 'Đen x Kimmese x Lynk Lee',
-            img: 'access/img/song2.jpg',
-            song: 'access/song/song2.mp3'
+            name: 'Vài lần đón đưa',
+            singer: 'Vũ',
+            img: 'access/img/vu.jpg',
+            song: 'access/song/vailandondua.mp3'
         },
         {
             id: '9',
-            name: 'Rap Acoustic 5',
-            singer: 'Đen Vâu, Binz..',
-            img: 'access/img/song3.jpg',
-            song: 'access/song/song3.mp3'
+            name: 'Tâm sự cùng người lạ',
+            singer: 'Miêu quý tộc',
+            img: 'access/img/mieuquytoc.jpg',
+            song: 'access/song/tamsucungnguoila.mp3'
         },
         {
             id: '10',
-            name: 'Cô gái bàn bên',
-            singer: 'Đen Vâu',
-            img: 'access/img/song4.jpg',
-            song: 'access/song/song4.mp3'
+            name: 'Chân ái',
+            singer: 'O Sen',
+            img: 'access/img/chanai.jpg',
+            song: 'access/song/chanai.mp3'
         }
         ,
         {
             id:'11',
-            name: 'Left and right',
-            singer: 'Charli Puth',
-            img: 'access/img/song5.jpg',
-            song: 'access/song/song5.mp3'
+            name: 'Bông hoa đẹp nhất',
+            singer: 'Vũ',
+            img: 'access/img/phihanhgiaheo.jpg',
+            song: 'access/song/bonghoadepnhap.mp3'
         },
         {
             id: '12',
-            name: 'Kẻ theo đuổi ánh sáng',
-            singer: 'Huy Vạc',
-            img: 'access/img/Lucian_0.jpg',
-            song: 'access/song/song6.mp3'
+            name: 'Như những phút ban đầu',
+            singer: 'Laddy Mây',
+            img: 'access/img/laddymay.jpg',
+            song: 'access/song/nhunhungphutbandau.mp3'
         },
         
         
