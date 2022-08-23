@@ -1,3 +1,5 @@
+
+
 :root {
     --primary-color: rgb(241, 48, 109);
 }
@@ -592,18 +594,27 @@ align-items: center;
 
 .dash-board {
     background-color: rgb(33, 37, 45);
-    display: flex;
-    justify-content: space-between;
+    display: none;
     margin: 0 12.25px;
     border-radius: 4px;
     border: solid 1px #6e6d6a5d;
     padding: 16px;
+    position: fixed;
+    bottom: 6px;
+    left: 0;
+    right: -0;
+}
+
+.dash-board-contain {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .dash-board__song {
     display: flex;
     color: #fff;
-
+    width: 300px;
 
 }
 
@@ -612,6 +623,7 @@ align-items: center;
     height: 45px;
     border-radius: 4px;
     background-size: cover;
+    background-position: center;
 }
 
 .dash-board__song__infor {
@@ -648,6 +660,14 @@ align-items: center;
     margin: 0 12px;
 }
 
+.dash-board__control-btn--play {
+    display: none;
+    color: #fff;
+    padding: 6px 9px;
+    border: none;
+    margin: 0 12px;
+}
+
 .dash-board__control-btn--shuffle {
     margin-right: 40px;
 }
@@ -675,6 +695,20 @@ align-items: center;
     display: inline-block;
     line-height: 22px;
     margin-left: 32px;
+    cursor: pointer;
+}
+
+.dash-board__more-option__quantity::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    right: 104px;
+    width: 64px;
+    height: 16px;
+}
+
+.dash-board__more-option__quantity:hover .quantity-options{
+    display: block;
 }
 
 .dash-board__more-option__volume {
@@ -689,6 +723,122 @@ align-items: center;
 }
 
 
+.quantity-options {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 54px;
+    background-color: #21252d;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 12px;
+    width: 136px;
+    
+}
+
+.quantity-options a:hover{
+    background-color: #0c0f12;
+}
+
+
+.quantity-options__heading {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+}   
+
+.quantity-option__recommend {
+    /* width: 100%; */
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+    display: block;
+    font-size: 10.4px;
+    cursor: pointer;
+
+}
+
+
+.quantity-options__recommend--text {
+
+}
+
+.quantity-options__recommend--capacity {
+    font-size: 10px;
+    color: #6a6b6e;
+    margin-top: -3px;
+}
+
+.quantity-options__option {
+    display: flex;
+    border-radius:4px;
+    padding: 8px;
+    margin-top: 4px;
+    text-decoration: none;
+}
+
+.quantity-options__option--quantity {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.quantity-options__option--capacity {
+    margin: 0;
+    margin-left: 4px;
+    font-size: 10px;
+    color: #6a6b6e;
+}
+
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: calc(100% + 2px);
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgb(209, 33, 33);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ed1c24;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.6px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    width: calc(100% + 2px);
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgb(209, 33, 33);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+
+
+input[type=range]{
+    margin: 0;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    height: 4px;
+    display: block;
+    width: calc(100% + 2px);
+    background-color: transparent;   
+}
 
 
 /* new======================= */
@@ -697,6 +847,10 @@ align-items: center;
  position: fixed;
  width: 100%;
  margin: -20px 8px 0 -8px;
+ position: fixed;
+ bottom: 6px;
+ left: 0;
+ right: -0;
 }
 .dashboard__display {
     justify-content: center;
@@ -780,10 +934,10 @@ align-items: center;
     
 }
 
-.progress{
+/* .progress{
     width: 100%;
-    height: 8px;
-}
+    height: 8px; */
+/* } */
 .progress-scroll {
     width: 12px;
     height: 8px;

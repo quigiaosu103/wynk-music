@@ -4,8 +4,14 @@ const CONFIGURE_OPTION= 'MUSIC_LAYER';
 const playList= $('.play-list');
 const audio= $('#audio');
 const play= $('#play');
-const pause= $('.pause-btn');
-const dashboardLayer= $('.main-poster__photo');
+const playListSongs= $('#play-list');
+const pause= $('#pause');
+const dashboardLayer= $('.dash-board');
+const dashboardPoster= $('.dash-board__song__poster');
+const dashboardName= $('.infor__name');
+const dashboardArtist= $('.infor__singer');
+const progress= $('.progress');
+
 
 const app = {
     config: JSON.parse(localStorage.getItem(CONFIGURE_OPTION))||{},
@@ -142,53 +148,79 @@ const app = {
 
     eventHandle : function() {
         play.onclick = function() {
-            // if(app.isPlaying) {
-            //     audio.pause();
-            // }else{
-                // }
-            audio.play();
+            if(app.isPlaying) {
+                    audio.pause();
+            }else{
+                audio.play();
+            }
 
             
             
         }
-        // pause.onclick = function() {
-        //     if(app.isPlaying) {
-        //         audio.pause();
-        //     }else{
-        //         audio.play();
-
-        //     }
+        pause.onclick = function() {
+            if(app.isPlaying) {
+                audio.pause();
+            }else{
+                audio.play();
+            }
 
             
             
-        // }
+        }
         audio.onplay = function() {
-            // pause.style.display= 'block';
-            // play.style.display= 'none'; 
+            pause.style.display= 'block';
+            play.style.display= 'none'; 
+            dashboardLayer.style.display= 'block';
             app.isPlaying=true
             // layerSpiner.play();
         }
-        // audio.onpause = function() {
-        //     pause.style.display= 'none';
-        //     play.style.display= 'block'; 
-        //     app.isPlaying=false
+        audio.onpause = function() {
+            pause.style.display= 'none';
+            play.style.display= 'block'; 
+            // dashboardLayer.style.display= 'none';
+            app.isPlaying=false
         //     layerSpiner.pause();
-        // }
+        }
         // end audio======
         audio.onended = function() {
-            if(app.isReplay){
-                audio.play();
-            }
-            else{
-                if(app.isRandom){
-                    app.randomSong()    
-                }else{
-                    app.nextSong();
-                }
-            }
+            // if(app.isReplay){
+            //     audio.play();
+            // }
+            // else{
+            //     if(app.isRandom){
+            //         app.randomSong()    
+            //     }else{
+                //     }
+                // }
+            app.nextSong();
             audio.play();
             app.activeSong()
         }
+
+        //xu ly timeline
+        audio.ontimeupdate = function() {
+            if(audio.duration){
+                var progressPercent= Math.floor(audio.currentTime*1000/audio.duration);
+                progress.value= progressPercent;
+            }
+            
+        }
+
+        progress.onchange = function(e) {
+            var progressValue= Math.floor(e.target.value*audio.duration/1000);
+            audio.currentTime= progressValue;
+        }
+
+        playListSongs.onclick = function () {
+            app.preIndex= app.currnetIndex;
+            app.currnetIndex=0;
+            app.loadCurrentSong();
+            console.log(app.currentSong)
+            app.activeSong()
+            audio.play();
+
+        }
+
         //play song clicked
         playList.onclick = function(e){
             const songNode= e.target.closest('.play-list__song:not(.active)');
@@ -205,9 +237,12 @@ const app = {
         }
 
     },
+
     loadCurrentSong: function() {
-        // var heading= $('.heading-song-name')
-        // heading.innerHTML= this.currentSong.name
+        dashboardName.innerHTML =this.currentSong.name
+        dashboardArtist.innerHTML =this.currentSong.singer
+        dashboardPoster.style.backgroundImage= `url('${this.currentSong.img}')`
+        // heading.innerHTML= 
         // console.log(dashboardLayer)
         // dashboardLayer.style.backgroundImage= `url('${this.currentSong.img}')`
         audio.src= this.currentSong.song
@@ -222,6 +257,14 @@ const app = {
         currentElment.classList.add('active')
         preElement.classList.remove('active')
         // app.scrollToActiveSong();
+    },
+    nextSong: function() {
+        app.preIndex = app.currnetIndex
+        app.currnetIndex++;
+        if(app.currnetIndex> app.songs.length-1) {
+            app.currnetIndex=0;
+        }
+        app.loadCurrentSong();
     },
 
 
