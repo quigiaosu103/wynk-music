@@ -15,79 +15,13 @@ body {
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto,sans-serif;
     padding: 0;
     box-sizing: border-box;
     margin: 0;
     border: 0;
 }
-.heading{
-    height: 77px;
-    background-color: rgb(33, 37, 45);
-    display: flex;
-    padding: 0 32px;
-    border-top: 3px solid rgb(237, 28, 36);
-}
 
-.heading-hover:hover {
-    color: rgb(193, 191, 191);
-}
-
-.lighter-hover:hover {
-    color: #fff;
-}
-
-.heading__logo {
-    margin: auto 40px auto 0;
-}
-
-.heading__logo--main {
-    width: 160px;
-
-}
-
-.heading__control-bar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 550;
-
-}
-
-.search__contain {
-    flex: 1;
-    margin-left: 6px;
-}
-
-.search-icon {
-    font-size: 16px;
-}
-
-.search {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    margin-right: 180px;
-    cursor: pointer;
-}
-
-.navigation {
-    flex: 1;
-     display: flex;
-    justify-content: space-between;
-    font-weight: 550;
-}
-
-.navigation a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-   
-    
-}
 
 .main-contain {
     background-color: #0c0f12;
@@ -177,6 +111,7 @@ html {
     color: #fff;
     font-size: 16px;
     margin-left: 8px;
+    font-weight: 600;
 }
 
 .show-more {
@@ -209,7 +144,7 @@ html {
     font-size: 36px;
     line-height: 40px;
     color: #fff;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
@@ -396,255 +331,8 @@ align-items: center;
     padding-right: 24px; 
 }
 
-.about {
-    border: solid .4px rgba(196, 195, 195,.4);
-    border-radius: 8px;
-    margin: 32px 32px 0 32px;
-
-    padding: 32px;
-    display: flex;
-}
-
-.about__poster {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    justify-content: space-between;
-    border-radius: 4px;
-}
-
-.about__informations {
-    width: 100%;
-    padding-left: 24px;
-    padding-right: 40px;
-}
-
-.about__informations__title {
-    margin: 0;
-    color: #fff;
-    margin-bottom: 4px;
-}
-
-.about__informations__description {
-    color: rgba(228, 222, 222, 0.863);
-    font-size: 14px;
-}
-
-.about__informations__description a {
-    color: rgba(251, 248, 248, 0.459);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.about__informations__description a:hover {
-    color: rgba(228, 222, 222, 0.863);
-}
-.app {
-    margin: 48px 32px;
-    background-color: #21252d;
-    border-radius: 4px;
-    padding: 24px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.app__about {
-    display: flex;
-}
-
-.app-poster {
-    width: 64px;
-    height: 64px;
-    background-size: cover;
-    border-radius: 4px;
-    margin-right: 24px;   
-}
-
-.app-informations {
-    color: #fff;
-
-}
-
-.app-heading {
-    margin: 0;
-    line-height: 28px;
-    /* text-align: center; */
-}
-
-.app-description {
-    margin-top: 4px;
-    font-size: 14px;
-}
-
-.app__download {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.app__download--android {
-    width: 150px;
-    height: 45px;
-    background-size: cover;
-    margin-right: 16px;
-}
-
-.app__download--ios {
-    width: 150px;
-    height: 45px;
-    background-size: cover;
-}
-
-.footer {
-    margin: 0 32px 16px 32px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer__contain {
-    width: 22%;
-}
-
-.footer__contain__heading {
-    color: #fff;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 8px;
-}
-
-.footer__contain__content {
-    font-size: 12px;
-    color: rgba(251, 248, 248, 0.459);
-}
-
-/* contact================= */
-
-.contact {
-    border-top: solid .4px rgba(196, 195, 195,.4);
-    border-bottom: solid .4px rgba(196, 195, 195,.4);
-    padding:  16px 32px ;
-    display: flex;
-    align-items: center;
-    height: 40px;
-    justify-content: space-between;
-}
-
-.contact__immediate {
-
-}
-
-.contact__immediat__link {
-    font-size: 14px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.contact__social {
-    display: flex;
-}
-
-.contact__social__link {
-    font-size: 20px;
-    list-style: none;
-    margin-right: 16px;
-    color: #fff;
-}
-
-.social__link-facebook {
-    padding: 8px 13px;
-}
-
-.social__link-twitter {
-    padding: 8px 9px;
-
-}
-
-.social__link-instagram {
-    padding: 8px 10px;
-
-}
-
-.social__link-youtube {
-
-}
 
 
-.separate-line {
-    color: rgba(228, 222, 222, 0.605);
-    padding: 8px;
-    font-size: 14px;
-}
-
-.des {
-    padding: 16px 32px;
-    color: rgba(228, 222, 222, 0.605);
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.detail__description {
-    width: 73%;
-}
-
-.detail__artist {
-    margin-left: 40px;
-
-}
-
-.dash-board {
-    background-color: rgb(33, 37, 45);
-    display: none;
-    margin: 0 12.25px;
-    border-radius: 4px;
-    border: solid 1px #6e6d6a5d;
-    padding: 16px;
-    position: fixed;
-    bottom: 6px;
-    left: 0;
-    right: -0;
-}
-
-.dash-board-contain {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.dash-board__song {
-    display: flex;
-    color: #fff;
-    width: 300px;
-
-}
-
-.dash-board__song__poster {
-    width: 45px;
-    height: 45px;
-    border-radius: 4px;
-    background-size: cover;
-    background-position: center;
-}
-
-.dash-board__song__infor {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    font-weight: 100;
-
-}
-
-.infor__name {
-    margin: 0;
-    font-size: 14px;
-
-}
-
-.infor__singer {
-    font-size: 12px;
-    color: #6e6d6a;
-    margin-top: 10px;
-}
 
 .dash-board__control-btn {
     display: flex;
@@ -987,7 +675,7 @@ input[type=range]{
 .song-detail__name {
     margin: 0;
     padding: 4px 0;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .song-detail__more {

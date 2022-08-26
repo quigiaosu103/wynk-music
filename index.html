@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="access/fontawesome-free-6.1.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Texturina&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./access/css/style.css">
+    <link rel="stylesheet" href="./access/css/pages-style.css">
+    <link rel="stylesheet" href="./access/css/mobie-responsive.css">
 </head>
 <body>
     <div class="heading">
         <div class="heading__logo">
-            <a href="
-            ">
+            <a href="">
             <img src="./access/img/logo1.png" alt="" class="heading__logo--main">
         </a>
         </div>
@@ -31,6 +32,7 @@
                 <a href="" class="download heading-hover">Download App</a> 
                 <a href="" class="light"><i class="fa-regular fa-sun"></i></a> 
                 <a href="" class="sign-in heading-hover">SIGN IN</a>
+                <a href="" class="sign-in--icon"><i class="fa-solid fa-user-large login-icon"></i></a>
             </div>
         </div>
     </div>
@@ -50,7 +52,18 @@
                     <div class="main-poster__photo" style="background-image: url('./access/img/dv.jpg'
                     );">
 
-                    </div>        
+                    </div>  
+                    <div class="main-player__main-contain">
+                        <h2 class="songs--title">
+                            Weekly Top 20: Songs
+                        </h2>
+                        <span class="songs__publisher">By Wynk Music</span>
+                        <ul class="similar-song__list-detail">
+                            <li class="list-detail__follows">6M Followers</li>
+                            <li class="list-detail__amount-songs">20 Songs</li>
+                            <li class="list-detail__total-time">43 min 22 sec</li>
+                        </ul>
+                    </div>      
                 </div>
 
                 <div class="main-contain__artists">
@@ -94,19 +107,21 @@
             </div>
             
             <div class="main-contain__songs">
-                <h2 class="songs--title">
-                    Weekly Top 20: Songs
-                </h2>
-                <span class="songs__publisher">By Wynk Music</span>
-                <ul class="similar-song__list-detail">
-                    <li class="list-detail__follows">6M Followers</li>
-                    <li class="list-detail__amount-songs">20 Songs</li>
-                    <li class="list-detail__total-time">43 min 22 sec</li>
-                </ul>
-
+                <div class="main-contain__songs-inf">
+                    <h2 class="songs--title">
+                        Weekly Top 20: Songs
+                    </h2>
+                    <span class="songs__publisher">By Wynk Music</span>
+                    <ul class="similar-song__list-detail">
+                        <li class="list-detail__follows">6M Followers</li>
+                        <li class="list-detail__amount-songs">20 Songs</li>
+                        <li class="list-detail__total-time">43 min 22 sec</li>
+                    </ul>    
+                </div>
                 <div class="songs__navbar">
                     <div class="control__button">
                         <span class="control-button__play btn primary-btn" id="play-list"><i class="fa-solid fa-play play-btn"></i>Play Songs</span>
+                        <!-- <span class="btn control-button__follow--icon circle-btn"><i class="fa-regular fa-heart"></i></span> -->
                         <span class="control-button__follow btn"><i class="fa-solid fa-plus"></i>Follow</span>
                     </div>
                     
@@ -285,5 +300,6 @@
 
     </div>
     <script src="./index2.js"></script>
+    <script src="./responsive.js"></script>
 </body>
 </html>

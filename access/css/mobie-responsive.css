@@ -1,0 +1,178 @@
+@media (max-width: 628px) {
+    .navigation  a{
+        display: none;
+    }
+
+    .main-contain, .heading, .similar {
+        padding: 0 16px;
+    }
+    .about {
+        padding: 16px;
+        margin: 16px;
+    }
+
+    .app {
+        margin: 48px 16px;
+        text-align: center;
+    }
+
+    .navigation .light, .navigation .sign-in--icon {
+        display: block;
+        font-size: 20px;
+    }
+
+    .login-icon {
+        font-size: 20px;
+    }
+
+    .navigation .light {
+        margin-left: 14px;
+        margin-right: 20px;
+    } 
+
+    .heading {
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+    }
+
+    
+    .heading .heading__control-bar{
+        justify-content: flex-end;
+    }
+
+    .heading__control-bar .search {
+        margin-right: 12px;
+        display: inline;
+    }
+
+    .search-icon {
+        font-size: 20px;
+    }
+    .search__contain {
+        display: none;
+    }
+    /* contain====================== */
+    .main-contain {
+        margin-top: 16px;
+    }
+    .app__download {
+        display: none;
+    }
+
+    .main-contain__main-layer {
+        display: block;
+    }
+
+    .main-poster__photo {
+        height: 100%;
+        width: 100%;
+        background-size: 100%;
+    }
+
+    .main-layer__singer {
+        width: 100%;
+    }
+
+    .main-layer__main-poster {
+        display: flex;
+    }
+
+    .main-poster__photo {
+        width: 30%;
+    }
+
+    .main-player__main-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 12px;
+    }
+
+    .main-player__main-contain .songs--title {
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .main-contain__singer--list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-contain__singer--list li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 23%;
+        padding: 0 12px;
+
+    }
+
+    .main-contain__singer--list {
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+    }
+
+    .more-artists .show-more {
+        display: none;
+    }
+
+    .main-contain__singer--list::-webkit-scrollbar {
+        display: none;
+      }
+      
+
+    .artist-img {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .main-contain__songs {
+        width: 100%;
+    }
+
+    .main-contain__songs-inf{
+        display: none;
+    }
+    .control-button__follow--icon {
+        display: inline-block;
+        
+    }
+    /* about=========================== */
+    .about__poster{
+        display: none;
+    }
+
+    .about__informations__title {
+        text-align: center;
+    }
+    .app-poster {
+        display: none;
+    }
+
+
+    /* download====================== */
+    .main-contain__heading {
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 629px){
+    .search__contain{
+        flex: 1;
+    }
+    .heading__control-bar{ 
+        width: 100%;
+    }
+    .main-player__main-contain {
+        display: none;
+    }
+    .control-button__follow--icon {
+        display: none;
+    }
+}
