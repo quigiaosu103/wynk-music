@@ -120,7 +120,7 @@ html {
     border: 1px solid #d3d3d3;
     border-radius: 20px;
     font-size: 14px;
-    padding: 8px;
+    padding: 8px 12px;
     margin-left: 24px;
     font-weight: 550;
     cursor: pointer;
@@ -219,7 +219,7 @@ align-items: center;
 .btn {
     border-radius: 23px;
     padding: 8px 12px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26px;
     display: inline-block;
     text-align: center;
@@ -404,11 +404,23 @@ align-items: center;
     display: inline-block;
     line-height: 22px;
     margin: 0 32px;
+    position: relative;
+    cursor: pointer;
 }
 
 .dash-board__more-option__play-list {
     color: #9da0a3;
 }
+
+.volume {
+    position: fixed;
+    bottom: 105px;
+    right: 43px;
+    width: 80px;
+    transform: rotate(270deg);
+}
+
+
 
 
 .quantity-options {
@@ -480,14 +492,14 @@ align-items: center;
 
 
 
-input[type=range] {
+.progress[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
 
   }
 
-  input[type=range]::-webkit-slider-runnable-track {
+  .progress[type=range]::-webkit-slider-runnable-track {
     width: calc(100% + 2px);
     height: 4px;
     cursor: pointer;
@@ -496,7 +508,7 @@ input[type=range] {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  input[type=range]::-webkit-slider-thumb {
+  .progress[type=range]::-webkit-slider-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
@@ -505,7 +517,7 @@ input[type=range] {
     -webkit-appearance: none;
     margin-top: -6.6px;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  .progress[type=range]:focus::-webkit-slider-runnable-track {
     width: calc(100% + 2px);
     height: 4px;
     cursor: pointer;
@@ -516,8 +528,7 @@ input[type=range] {
 
   }
 
-
-input[type=range]{
+  .progress[type=range]{
     margin: 0;
     position: absolute;
     bottom: -1px;
@@ -526,7 +537,73 @@ input[type=range]{
     display: block;
     width: calc(100% + 2px);
     background-color: transparent;   
+} 
+
+  
+ #volume[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+
+  }
+
+  #volume[type=range]::-webkit-slider-runnable-track {
+    width: calc(100% + 2px);
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgb(209, 33, 33);
+    border-radius: 1px;
+  }
+  #volume[type=range]::-webkit-slider-thumb {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ed1c24;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.7px;
+    box-shadow:  0 3px 3px rgba(0, 0, 0, 0.1);
+  }
+  #volume[type=range]:focus::-webkit-slider-runnable-track {
+    width: calc(100% + 2px);
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: rgb(209, 33, 33);
+    
+
+  }
+
+#volume[type=range]{
+    margin: 0;
+    position: absolute;
+    bottom: -7px;
+    right: -1px;
+    height: 4px;
+    display: none;
+    width: calc(100% + 2px);
+    background-color: transparent;  
+    padding: 6px 0; 
+
 }
+
+.dash-board__more-option__volume:hover #volume{
+    display: block;
+}
+
+.dash-board__more-option__volume::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    display: block;
+    bottom: 18px;
+    right: 2px;
+    position: absolute;
+}
+
+
+
 
 
 /* new======================= */

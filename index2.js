@@ -11,6 +11,7 @@ const dashboardPoster= $('.dash-board__song__poster');
 const dashboardName= $('.infor__name');
 const dashboardArtist= $('.infor__singer');
 const progress= $('.progress');
+const volume= $('#volume');
 
 
 const app = {
@@ -170,7 +171,10 @@ const app = {
         audio.onplay = function() {
             pause.style.display= 'block';
             play.style.display= 'none'; 
-            dashboardLayer.style.display= 'block';
+            if(screenWith>629){
+                dashboardLayer.style.display= 'block';
+
+            }
             app.isPlaying=true
             // layerSpiner.play();
         }
@@ -195,6 +199,10 @@ const app = {
             app.nextSong();
             audio.play();
             app.activeSong()
+        }
+
+        volume.oninput = function() {
+            audio.volume = volume.value/100;
         }
 
         //xu ly timeline

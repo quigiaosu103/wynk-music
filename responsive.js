@@ -4,11 +4,15 @@ const imageElement= $('.main-poster__photo')
 const artistImgElement= $$('.artist-img');
 const clientWidth= imageElement.clientWidth;
 const artistImgWidth= artistImgElement[0].clientWidth;
+const screenWith= $('.heading').clientWidth;
+const signupBtn= $('.recommend-song-view__option__not-member');
 
-expectedHiegh.style.height= `${clientWidth}px`
+if(screenWith<=628){
+    expectedHiegh.style.height= `${clientWidth}px`
 
-console.log(artistImgElement.length)
-for(var i=0; i<artistImgElement.length; i++) {
-    artistImgElement[i].style.height= `${artistImgWidth}px`;
+    for(var i=0; i<artistImgElement.length; i++) {
+        artistImgElement[i].style.height= `${artistImgWidth}px`;
+    }
+    artistImgElement.style.height= `${artistImgWidth}px`;
+    signupBtn.innerHTML= "Sign in";
 }
-artistImgElement.style.height= `${artistImgWidth}px`;

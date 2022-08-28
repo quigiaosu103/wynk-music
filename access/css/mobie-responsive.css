@@ -158,8 +158,36 @@
     .main-contain__heading {
         display: none;
     }
-}
 
+    /* contact==================================== */
+    .contact {
+        display: block ;
+    }
+
+    .contact__immediate {
+        text-align: center;
+    }
+
+    .btn {
+        padding: 8px;
+    }
+
+    .contact__social{
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    .des {
+        display: block;
+        text-align: center;
+    }
+
+    .detail__artist {
+        display: block;
+        margin: 0;
+        padding-top: 16px;
+    }
+}
 
 
 @media (min-width: 629px){
