@@ -12,6 +12,10 @@ const dashboardName= $('.infor__name');
 const dashboardArtist= $('.infor__singer');
 const progress= $('.progress');
 const volume= $('#volume');
+const mobileBar= $('.heading__mobile-bar');
+const navigation= $('.navigation');
+const closeBtn=$('.tab-mobile__close');
+const tabMobile= $('.tab-mobile');
 
 
 const app = {
@@ -214,19 +218,27 @@ const app = {
             
         }
 
-        progress.onchange = function(e) {
+        progress.oninput = function(e) {
             var progressValue= Math.floor(e.target.value*audio.duration/1000);
             audio.currentTime= progressValue;
         }
 
         playListSongs.onclick = function () {
+            console.log('clicked');
             app.preIndex= app.currnetIndex;
             app.currnetIndex=0;
             app.loadCurrentSong();
-            console.log(app.currentSong)
             app.activeSong()
             audio.play();
 
+        }
+
+        mobileBar.onclick = function() {
+            tabMobile.style.display="block";
+        }
+
+        closeBtn.onclick = function() { 
+            tabMobile.style.display="none";
         }
 
         //play song clicked
@@ -236,8 +248,8 @@ const app = {
                 // console.log(songNode.dataset.index)
                 app.preIndex= app.currnetIndex;
                 app.currnetIndex= e.target.closest('.play-list__song').dataset.index;
+                console.log(app.currnetIndex)
                 app.loadCurrentSong();
-                console.log(app.currentSong)
                 app.activeSong()
                 // app.scrollActive()
                 audio.play();
